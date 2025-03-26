@@ -6,7 +6,7 @@
 <p>Petite annonces</p>
 <ul>
     {% for listing in listings %}
-    <li>{{ listing.title | upper }}</li>
+        <li><a href="{% url 'listings-detail' listing.id %}">{{ listing.title | upper }}</a></li>
     {% endfor %}
 </ul>
 

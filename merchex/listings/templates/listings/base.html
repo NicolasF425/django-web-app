@@ -6,6 +6,11 @@
 
     <body>
 
+        <nav>
+            <a href="{% url 'band-list' %}">Groupes</a>
+            <a href="{% url 'listings-list' %}">Listing</a>
+        </nav>
+
         {% block content %}{% endblock %}
 
     </body>
