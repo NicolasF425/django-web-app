@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Listings</h1>
-<p>Petite annonces</p>
+<a href="{% url 'listing-create' %}">Créer un nouveau listing</a>
 <ul>
     {% for listing in listings %}
         <li><a href="{% url 'listings-detail' listing.id %}">{{ listing.title | upper }}</a></li>
