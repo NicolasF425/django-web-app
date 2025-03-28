@@ -6,7 +6,10 @@
 <a href="{% url 'listing-create' %}">Créer un nouveau listing</a>
 <ul>
     {% for listing in listings %}
-        <li><a href="{% url 'listings-detail' listing.id %}">{{ listing.title | upper }}</a></li>
+        <li>
+            <a href="{% url 'listing-detail' listing.id %}">{{ listing.title | upper }}</a>
+            - <a href="{% url 'listing-update' listing.id %}">[Modifier]</a>
+        </li>
     {% endfor %}
 </ul>
 

@@ -7,7 +7,10 @@
     <li>Type : {{ listing.get_type_display }}</li>
     <li>Année : {{ listing.year }}</li>
     <li>Sold : {{ listing.sold|yesno }}</li>
+</ul>
 
-<a href="{% url 'listings-list' %}">Retour à tous les groupes</a>
+<a href="{% url 'listing-update' listing.id %}">Modifier ce listing</a>
+
+<a href="{% url 'listings-list' %}">Retour à tous les listings</a>
 
 {% endblock %}
